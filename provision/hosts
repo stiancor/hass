@@ -1,1 +1,2 @@
+[hass]
 hass ansible_user=root
