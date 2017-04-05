@@ -4,6 +4,7 @@
   gather_facts: no
   roles:
     - ansible-prereqs
+    - colorize-bash
     - package-repos
     - localize
     - firewalled

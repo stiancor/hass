@@ -1,0 +1,5 @@
+- name: Colorize bash console
+  copy: src=../files/bash.bashrc dest=/etc/bash.bashrc owner=root group=root mode=644
+
+- name: Remove default bashrc
+  shell: creates=/root/.bashrc_backup mv /root/.bashrc /root/,bashrc_backup
