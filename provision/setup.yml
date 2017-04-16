@@ -1,11 +1,3 @@
----
-- name: bootstrap server
-  hosts: all
-  gather_facts: no
-  roles:
-    - ansible-prereqs
-    - colorize-bash
-    - package-repos
-    - localize
-    - firewalled
-    - { role: nickjj.fail2ban, become: true, tags: fail2ban }
+
+- include: base-setup.yml
+- include: core-setup.yml
