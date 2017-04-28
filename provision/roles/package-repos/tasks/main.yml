@@ -1,3 +1,6 @@
 ---
 - name: sources
   copy: src=etc-apt-sources.list dest=/etc/apt/sources.list owner=root group=root mode=0644 force=yes backup=yes
+
+- name: upgrade packages
+  apt: upgrade=dist update_cache=yes

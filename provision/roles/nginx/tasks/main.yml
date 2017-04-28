@@ -2,7 +2,7 @@
 - name: NGINX installing
   apt: name=nginx state=latest
 
-- name: NGINX starting
-  service:
-    name: nginx
-    state: started  
+- name: Configure nginx
+  copy: src=templates/nginx.conf.tp dest=/etc/nginx/nginx.conf
+  notify:
+    - restart nginx    
