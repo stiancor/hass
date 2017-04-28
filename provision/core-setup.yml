@@ -2,6 +2,8 @@
   - name: core server
     hosts: all
     gather_facts: no
+
     roles:
-      - nginx   
+      - nginx 
+      - java
   
