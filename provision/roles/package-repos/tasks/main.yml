@@ -2,5 +2,8 @@
 - name: sources
   copy: src=etc-apt-sources.list dest=/etc/apt/sources.list owner=root group=root mode=0644 force=yes backup=yes
 
+- name: sources backports
+  copy: src=etc-apt-jessie-backports.list dest=/etc/apt/sources.list.d/backports.list owner=root group=root mode=0644 force=yes backup=yes
+
 - name: upgrade packages
   apt: upgrade=dist update_cache=yes

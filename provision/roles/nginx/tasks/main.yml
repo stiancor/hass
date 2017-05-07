@@ -5,4 +5,4 @@
 - name: Configure nginx
   copy: src=templates/nginx.conf.tp dest=/etc/nginx/nginx.conf
   notify:
-    - restart nginx    
+    - restart nginx      
