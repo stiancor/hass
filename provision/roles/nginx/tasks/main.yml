@@ -1,4 +1,8 @@
 
+- user:
+    name: nginx
+    group: www
+
 - name: NGINX installing
   apt: name=nginx state=latest
 

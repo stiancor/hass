@@ -14,11 +14,8 @@
 - name: ufw - allow http port 80
   ufw: rule=allow port=80 proto=tcp
 
+- name: ufw - allow http port 443
+  ufw: rule=allow port=443 proto=tcp
+
 - name: ufw - allow ssh
   ufw: rule=limit port=ssh proto=tcp
-
-- name: ufw - allow ssh 2
-  ufw: rule=limit port=2252 proto=tcp
-
-- name: ufw - allow ssh 3
-  ufw: rule=limit port=2262 proto=tcp
